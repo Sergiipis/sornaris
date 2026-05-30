@@ -1,0 +1,87 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sornaris"
+version = "0.1.0"
+description = "Multi-axis bisect engine for finding LLM-agent regressions across prompt, model, tool-schema, and RAG-corpus changes"
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+authors = [{ name = "Sergiipis", email = "serjus83@outlook.com" }]
+maintainers = [{ name = "Sergiipis", email = "serjus83@outlook.com" }]
+requires-python = ">=3.10"
+dependencies = []
+keywords = [
+    "llm",
+    "bisect",
+    "regression",
+    "evaluation",
+    "prompt-engineering",
+    "agents",
+    "observability",
+    "testing",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/Sergiipis/sornaris"
+Repository = "https://github.com/Sergiipis/sornaris"
+Issues = "https://github.com/Sergiipis/sornaris/issues"
+Changelog = "https://github.com/Sergiipis/sornaris/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/Sergiipis/sornaris#readme"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-cov>=4",
+    "ruff>=0.4",
+    "mypy>=1.10",
+    "build>=1.0",
+    "twine>=5.0",
+    "cyclonedx-bom",
+    "pip-audit",
+]
+
+[project.scripts]
+sornaris = "sornaris.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+sornaris = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+
+[tool.mypy]
+python_version = "3.10"
+files = ["src"]
+ignore_missing_imports = true
+warn_unused_ignores = true
+
+[tool.coverage.run]
+source = ["sornaris"]
+branch = true

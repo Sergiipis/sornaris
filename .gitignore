@@ -1,0 +1,28 @@
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual envs
+.venv*/
+venv/
+
+# Local cache files produced by --cache
+*.sqlite
+*.db
+bisect_report.json
+
+# Release-prep instructions / drafts (not part of the package)
+RELEASE_PENDING.md
+RELEASE_EMAIL_DRAFT.txt
+FINAL_REPORT.md
