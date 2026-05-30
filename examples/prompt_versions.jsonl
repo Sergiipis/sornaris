@@ -1,0 +1,6 @@
+{"version_id": "v1", "content": "You are a careful, accurate assistant. Answer the question directly and include the exact answer.", "timestamp": 1.0}
+{"version_id": "v2", "content": "You are an accurate assistant. Answer directly with the exact answer.", "parent_id": "v1", "timestamp": 2.0}
+{"version_id": "v3", "content": "Answer the question. Be brief.", "parent_id": "v2", "timestamp": 3.0}
+{"version_id": "v4", "content": "Be extremely brief. One or two words only.", "parent_id": "v3", "timestamp": 4.0}
+{"version_id": "v5", "content": "Reply with a single emoji that captures the vibe.", "parent_id": "v4", "timestamp": 5.0}
+{"version_id": "v6", "content": "Reply only with a single emoji.", "parent_id": "v5", "timestamp": 6.0}

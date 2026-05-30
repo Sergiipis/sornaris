@@ -1,0 +1,55 @@
+name: Bug report
+description: Something in sornaris behaves incorrectly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please fill in enough detail to reproduce.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+      placeholder: "Ran `sornaris run --prompts ... --evals ...` and got ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Exact commands / a minimal script. Include the prompt/eval JSONL shape if relevant.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: sornaris version
+      placeholder: "0.1.0  (output of: pip show sornaris)"
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: "3.11.x  (output of: python --version)"
+    validations:
+      required: true
+  - type: dropdown
+    id: provider
+    attributes:
+      label: Provider in use
+      options:
+        - fake (offline)
+        - openai
+        - anthropic
+        - other / custom
+    validations:
+      required: true

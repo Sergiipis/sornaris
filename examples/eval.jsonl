@@ -1,0 +1,4 @@
+{"example_id": "q1", "input": "What is the capital of France?", "expected": "Paris"}
+{"example_id": "q2", "input": "What is 2 + 2?", "expected": "4"}
+{"example_id": "q3", "input": "What color is the clear daytime sky?", "expected": "blue"}
+{"example_id": "q4", "input": "What is the chemical symbol for water?", "expected": "H2O"}
